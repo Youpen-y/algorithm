@@ -1,4 +1,5 @@
 #include <iostream>
+#include<cmath>
 
 using namespace std;
 
@@ -44,7 +45,7 @@ int main()
     cin>>volume;
     cout << "Please input the num of things"<<endl;
     cin>>n;
-    thing a[n];
+    thing *a = new thing[n];
     for(int i=0;i<n;i++)
     {
         int tempa,tempb;
@@ -58,7 +59,7 @@ int main()
     int tempvolume=0;
     int tempvalue=0;
     int maxvalue=0;
-    for(int i=0;i<(n<<1);i++)
+    for(int i=0;i<pow(2,n);i++)
     {
 
         for(int j=0;j<n;j++)
@@ -72,10 +73,12 @@ int main()
         }
         if(tempvolume<=volume)
         {
+            cout<<"hello1"<<endl;
             if(tempvalue>maxvalue)
                 maxvalue=tempvalue;
         }
     }
+    delete a;
     cout<<"The MAXvalue is : "<<maxvalue<<endl;
     return 0;
 }
