@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 class thing{
@@ -9,7 +8,8 @@ private:
 public:
     thing()
     {
-
+        volume=0;
+        value=0;
     }
     thing(int a,int b)
     {
@@ -39,14 +39,8 @@ int main()
     int n,volume;
     cout << "Please input the volume of the bag: "<<endl;
     cin>>volume;
-    cout << ""<<endl;
-    cin >> n;
-    thing a[n];
-    for(int i=0;i<n;i++)
-    {
-        
-
-    }
+    cout << "Please input the num of things"<<endl;
+    const int  n =10;
     int tempvolume,tempvalue,maxvalue;
     for(int i=0;i<(n<<1);i++)
     {
