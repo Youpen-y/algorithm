@@ -20,7 +20,7 @@ int knapSack(int totalWeight, int weight[], int value[], int n)
     // than Knapsack capacity W, then 
     // this item cannot be included 
     // in the optimal solution 
-    if (weight[n] > totalWeight) 
+    if (weight[n-1] > totalWeight) 
         return knapSack(totalWeight, weight, value, n - 1); 
   
     // Return the maximum of two cases: 
@@ -28,7 +28,7 @@ int knapSack(int totalWeight, int weight[], int value[], int n)
     // (2) not included 
     else
         return max( 
-            value[n] + knapSack(totalWeight - weight[n],  weight, value, n - 1), 
+            value[n-1] + knapSack(totalWeight - weight[n-1],  weight, value, n - 1), 
             knapSack(totalWeight, weight, value, n - 1)); 
 } 
   
