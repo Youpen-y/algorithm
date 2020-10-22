@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 class thing{
@@ -24,7 +25,7 @@ public:
     {
         return value;
     }
-    void changeweigh(int a)
+    void changevolume(int a)
     {
         volume = a;
     }
@@ -32,16 +33,31 @@ public:
     {
         value = b;
     }
+    ~thing(){}
 };
 
 int main()
 {
-    int n,volume;
+    int volume;
+    int n;
     cout << "Please input the volume of the bag: "<<endl;
     cin>>volume;
     cout << "Please input the num of things"<<endl;
-    const int  n =10;
-    int tempvolume,tempvalue,maxvalue;
+    cin>>n;
+    thing a[n];
+    for(int i=0;i<n;i++)
+    {
+        int tempa,tempb;
+        cout<<"The "<<i+1<<" thing's volume is : "<<endl;
+        cin>>tempa;
+        a[i].changevolume(tempa);
+        cout<<"The "<<i+1<<" thing's value is : "<<endl;
+        cin>>tempb;
+        a[i].changevalue(tempb);
+    }
+    int tempvolume=0;
+    int tempvalue=0;
+    int maxvalue=0;
     for(int i=0;i<(n<<1);i++)
     {
 
@@ -49,8 +65,8 @@ int main()
         {
             if(i%2==1)
             {
-                tempvolume+=a[j].getvolume;
-                tempvalue+=a[j].getvalue;
+                tempvolume+=a[j].getvolume();
+                tempvalue+=a[j].getvalue();
             }
             i=i/2;
         }
@@ -60,34 +76,6 @@ int main()
                 maxvalue=tempvalue;
         }
     }
-//    int nowvalue=0;
-//    int value=0;
-//    for(int i=1;i<=n;i++)
-//    {
-//        value=value+i;
-//
-//    }
-//    int maxvolume,maxvalue;
-//    for(int i=1;i<=n;i++)
-//    {
-//        for(int j=1;j<=n;j++)
-//        {
-//            if(j<=i)continue;
-//            maxvolume=a[i].volume+a[j].volume;
-//            if(maxvolume<=volume)
-//                maxvalue=a[i].value+a[j].value;
-//            else
-//                maxvalue=a[i].value;
-//            for(int k=1;k<=n;k++)
-//            {
-//                if(k<=j)continue;
-//                if(maxvolume+a[k].volume<=volume)
-//                {
-//                    maxvalue = maxvalue+a[k].value;
-//                    maxvolume = maxvolume+a[k].volume;
-//                }
-//            }
-//        }
-//    }
+    cout<<"The MAXvalue is : "<<maxvalue<<endl;
     return 0;
 }
