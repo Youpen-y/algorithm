@@ -1,4 +1,4 @@
-/* This is a way using binary bits to solve the knapsack problem
+/* This is a way using binary bits to solve the 0/1 knapsack problem
 **For a bit, 1 means inclueded and 0 means exclueded.
 **
 ** author: youpen_y
