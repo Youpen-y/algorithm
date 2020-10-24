@@ -6,7 +6,7 @@ _<br>[knapsack(recursive)](code/knapsack2.cpp)</br>_
 ### TSP问题
 _[TSPProgram](code/TSPProblem.cpp)_
 ### Sum of Subarray
-*<br>[subarray](code/subarray.cpp)</br>*
+*<br>[subarray](/algorithm/code/subarray.cpp)</br>*
 
 
 > Continue to update...... 
