@@ -12,5 +12,4 @@ _[TSPProgram](code/TSPProblem.cpp)_
 > Continue to update...... 
 
 **************************
-![图片](https://upload-images.jianshu.io/upload_images/703764-605e3cc2ecb664f6.jpg?)
 **************************
