@@ -3,6 +3,7 @@
 ### 0/1 Knapsack problem (0/1背包问题）
 *<br>[knapsack(brute-force)](code/knapsack1.cpp)</br>*
 _<br>[knapsack(recursive)](code/knapsack2.cpp)</br>_
+_<br>[knapsack(dynamic)](code/knapsack3.cpp)</br>_
 ### TSP问题
 _[TSPProgram](code/TSPProblem.cpp)_
 ### Sum of Subarray
@@ -12,4 +13,5 @@ _[TSPProgram](code/TSPProblem.cpp)_
 > Continue to update...... 
 
 **************************
+
 **************************
