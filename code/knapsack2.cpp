@@ -1,6 +1,6 @@
-/* A Naive recursive implementation of 
+/* A Naive recursive implementation of dynamic programmingt to solve
  0-1 Knapsack problem */
-#include <bits/stdc++.h> 
+#include<iostream>
 using namespace std; 
   
 // A utility function that returns 
@@ -22,10 +22,6 @@ int knapSack(int totalWeight, int weight[], int value[], int n)
     // in the optimal solution 
     if (weight[n-1] > totalWeight) 
         return knapSack(totalWeight, weight, value, n - 1); 
-  
-    // Return the maximum of two cases: 
-    // (1) nth item included 
-    // (2) not included 
     else
         return max( 
             value[n-1] + knapSack(totalWeight - weight[n-1],  weight, value, n - 1), 
