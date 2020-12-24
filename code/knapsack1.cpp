@@ -1,8 +1,9 @@
-/* This is a way using binary bits to solve the 0/1 knapsack problem
-** For a bit, 1 means inclueded and 0 means exclueded.
+/* This is a way using binary bits to solve the 0/1 knapsack problem.(Brute force)
+** For n items, (one item, one bit, 1 means inclueded and 0 means exclueded.)
+** So there are 2^n states. Every real number in [0,2^n) will represent a situation.
 ** eg. 1100 means first and second is inclued, and third and fourth is exclued.
-** 
-** author: youpen_y
+** Test the 2^n cases, Find the Maxvalue and Record the path.
+**              author: youpen_y
 */
 
 #include<iostream>
@@ -15,7 +16,7 @@ void knapsack(int weight[],int value[],int W,int N)
 {
 
     int maxvalue=0;
-	int result=0;
+	int result=0;         //save the real number represents the best situation.
 	int path[N];         //record the items that be included. eg. If the third item was included, then path[2] = 1；
     for(int i=0;i<pow(2,N);i++)  //there, i will go through the 2^n cases
     {
